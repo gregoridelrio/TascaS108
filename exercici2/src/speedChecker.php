@@ -7,11 +7,11 @@ class speedChecker
   {
     if ($this->speed < 30) {
       return 'Molt lent';
-    } elseif ($this->speed >= 30 && $this->speed <= 60) {
+    } elseif ($this->speed <= 60) {
       return 'Velocitat adequada';
-    } elseif ($this->speed >= 61 && $this->speed <= 80) {
+    } elseif ($this->speed <= 80) {
       return 'Excés lleu';
-    } elseif ($this->speed >= 81 && $this->speed <= 100) {
+    } elseif ($this->speed <= 100) {
       return 'Excés moderat';
     } elseif ($this->speed > 100) {
       return 'Excés greu';
