@@ -31,4 +31,23 @@ class speedCheckerTest extends TestCase
     $speed = new speedChecker(101);
     $this->assertEquals('Excés greu', $speed->speedSensor());
   }
+  /**
+   * @dataProvider speedProvider
+   */
+  public function testSpeedChecker(int $speed, string $expectedResponse): void
+  {
+    $checker = new SpeedChecker($speed);
+
+    $this->assertEquals($expectedResponse, $checker->speedSensor());
+  }
+  public static function speedProvider(): array
+  {
+    return [
+      'Menor a 30' => [29, 'Molt lent'],
+      'Menor o igual a 60' => [31, 'Velocitat adequada'],
+      'Menos o igual a 80' => [61, 'Excés lleu'],
+      'Menor o igual a 100' => [81, 'Excés moderat'],
+      'Més de 100' => [101, 'Excés greu'],
+    ];
+  }
 }
