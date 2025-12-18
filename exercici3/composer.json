@@ -1,0 +1,17 @@
+{
+    "name": "grego/exercici3",
+    "autoload": {
+        "psr-4": {
+            "Grego\\Exercici3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Laurea Gregori",
+            "email": "gregoridelrio@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}
